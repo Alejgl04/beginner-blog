@@ -1,4 +1,10 @@
 Blog List
-<br>
+<hr>
+{% for post in posts %}
 
+  <a href="{% url 'blog:detail' post.pk  %}">{{post}}</a> <a href="{% url 'blog:update' post.pk %}">Update</a>
+
+{% endfor %}
+
+<hr>
 <a href="{% url "blog:create" %}">Create</a>
